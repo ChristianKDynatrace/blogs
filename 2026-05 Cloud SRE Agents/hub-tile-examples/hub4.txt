@@ -1,0 +1,28 @@
+# Azure SRE Agent
+Unlock autonomous cloud operations fueled by Dynatrace insights.
+
+## Overview
+The integration of Dynatrace with Microsoft Azure SRE Agent boosts the efficiency of cloud operations by leveraging AI-based root cause analysis and real-time production insights, alongside a comprehensive understanding of complex, large-scale IT environments.
+
+Seamlessly integrate Azure SRE Agent with Dynatrace to elevate your incident management:
+
+- Unlock smarter detection and remediation
+- Infuse real-time, governed production data and causal root-cause into Azure SRE Agent workflows and runbooks.
+- Proactively detect and remediate incidents and security vulnerabilities
+- Accelerate investigation and remediation with Dynatrace CA and production context right where you work.
+- Triage and debug faster, without the need for context switching.
+- Improve reliability by preventing incidents before they impact customers.
+- Enhance the user experience with natural language interactions for greater efficiency.
+- Maintain strict governance with fine-grained access controls and secure authentication.
+
+
+# Use cases
+- Cut MTTR by automating routine runbooks and diagnostics, with safe, approved mitigation actions based on full context.
+- Reduce security risk by triaging vulnerabilities faster with production evidence, triggering guided fixes, and validating outcomes.
+- Accelerate delivery with contextual GitHub issues and PRs that include root cause, blast radius, and tests, minimizing issue reproduction time and rework.
+- Improve fix accuracy by correlating Azure and Dynatrace telemetry for precise root-cause and impact analysis.
+- Prevent incidents before they happen using real-time signals and historical trends to stop regressions and reduce toil.
+
+## Get started
+Access the Azure SRE Agent directly in your Azure portal.
+Configure the Dynatrace MCP Server

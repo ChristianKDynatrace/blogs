@@ -1,0 +1,18 @@
+# AWS DevOps Agent
+Resolve issues autonomously with Dynatrace and the AWS DevOps Agent.
+
+## Overview
+Integrate Dynatrace’s AI-powered observability with the AWS DevOps Agent to enable autonomous incident investigations and remediation. This collaboration helps you reduce MTTR, minimize manual effort, and keep applications healthy without constant human intervention. You gain real-time production context, topology-aware root cause analysis, and automated workflows that resolve issues before they impact customers. This means fewer escalations, faster recovery, and improved reliability across your AWS workload.
+
+## Use cases
+- Autonomous troubleshooting: AWS DevOps Agent detects anomalies and executes guided remediation steps using Dynatrace insights, reducing human intervention during critical incidents.
+- Continuous health monitoring: Proactively prevent outages with predictive AI and automated checks that identify risks before they become failures.
+- Integrated workflow: Eliminate tool-switching—findings and actions surface directly in Dynatrace dashboards, creating a single source of truth for operations teams.
+- Scalable incident response: Handle complex, multi-service AWS environments with topology-aware analysis and automated playbooks for consistent remediation.
+
+## Get started
+Install the AWS DevOps Agent: Available via AWS Marketplace or pre-installed in supported environments.
+Connect Dynatrace: Configure telemetry and link Dynatrace as a source for observability data.
+Enable Autonomous Mode: Activate workflows for anomaly detection and automated remediation.
+Validate Integration: Test with sample incidents to ensure proper automation and reporting.
+For more information, go to the AWS documentation.

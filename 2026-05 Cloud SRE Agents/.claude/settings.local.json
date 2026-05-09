@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:www.dynatrace.com)",
+      "PowerShell(pip install python-docx markdown 2>&1)"
+    ]
+  }
+}

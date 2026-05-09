@@ -1,0 +1,26 @@
+# Dynatrace Intelligence
+Action based on answers with deterministic insights and agentic operations.
+
+## Overview
+Dynatrace Intelligence: The industry’s first agentic operations system. Dynatrace Intelligence fuses deterministic and agentic AI to help you tackle exploding complexity and dynamic AI-powered environments with reliable automation.
+
+Deterministic AI delivers answers, not guesses. Turn consistent and accurate insights into reliable actions, powered by Dynatrace causal AI, the unified Grail data lakehouse, and the Smartscape real-time dependency graph.
+
+Agentic AI reasons and acts autonomously. Leverage answers provided by deterministic AI to accelerate your transition towards fully autonomous operations with guardrails for efficiency and reliability at scale.
+
+The core intelligence of Dynatrace Intelligence is built by the Foundation Agents. They provide deterministic, system-level reasoning and analysis. They operate universally across domains, supplying other agents with trusted root cause analysis, forecasting, etc. By establishing consistent, deterministic decision pathways, they create a reliable baseline for enterprise-wide autonomous operations.
+
+Agentic Workflows orchestrate goal‑driven sequences within Dynatrace Intelligence. They combine the capabilities of multiple agents to deliver precise outcomes. You can compose these workflows directly, while Domain Agents can autonomously generate or refine them to accelerate progress, all while maintaining appropriate guardrails and approvals. This creates a powerful, adaptive execution layer where human expertise and autonomous intelligence collaborate to drive reliable, outcome‑focused automation at scale.
+
+## Use cases
+Developers:
+- Detect, diagnose, and recommend code-level fixes, grounded in deterministic insight and Grail/Smartscape context
+
+SRE teams:
+- Stabilize cloud/Kubernetes operations by turning deterministic findings into on-call-ready context, actions, and updates automatically.
+
+Security teams:
+- Triage, prioritize, and initiate proactive remediation to react quickly to identified risks
+
+## Get started
+See our documentation for more details.

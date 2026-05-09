@@ -1,0 +1,25 @@
+# Dynatrace Assist
+Dynatrace Assist: Ask, analyze, and act with Dynatrace Intelligence.
+
+## Overview
+Dynatrace Assist is your natural‑language gateway into Dynatrace Intelligence, the agentic operations system that brings the full platform together for you. Instead of switching between dashboards, queries, apps, and other tools, you simply ask a question and Dynatrace Intelligence responds accordingly, using Dynatrace’s generative, causal, and predictive AI capabilities as well as all agentic tools provided by Dynatrace MCP Server. Like a true team member, Assist draws context from Grail, maps relationships through Smartscape, and collaborates with Dynatrace agents to deliver grounded, precise answers. As the conversation continues, you naturally move from insights and understanding to exploration and action. Ask. Analyze. Act.
+
+## Use cases
+Use Assist for use cases such as:
+- In-context assistance to help with onboarding, Dynatrace usage, and configuration topics
+- Explain Kubernetes warning signals, Logs, Problems, threat detection findings, or database insights integrated right into the respective app
+- Analyze your data, get insights, and recommend next steps right within the Assist chat interface
+- Interact with available Dynatrace foundational agents for deeper analysis when needed
+
+and much more coming in the next weeks and months.
+
+## Get started
+To get started with this app, you simply need to enable generative AI functionality for your environment and assign the necessary permissions to the relevant user groups via a policy. See our documentation for further details.
+
+Once users have access, all they need to do to get started is to select the new Assist entry (below the global search) in the dock and ask Dynatrace Assist their desired question, or select one of the example prompts.
+
+Curious to understand how Dynatrace Intelligence generative AI is being adopted across your environment? Check out the read-made dashboard called “Generative AI feature adoption”.
+
+*Please note that your prompts are sent to LLMs hosted by enterprise vendors such as Microsoft Azure AI and AWS Bedrock, which power Dynatrace Intelligence generative AI. These vendors don't store the submitted data or any responses. The prompts and related responses are used only to serve your experience. Neither our enterprise vendors nor Dynatrace use the prompts to fine-tune or improve any models or services, or to train models across customers or environments.
+
+Dynatrace may store prompts submitted to Dynatrace Assist and the responses provided by the LLMs to better understand use cases, contextualize feedback on those responses, and identify additional user expectations.*
