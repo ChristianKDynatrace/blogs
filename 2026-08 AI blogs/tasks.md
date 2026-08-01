@@ -50,7 +50,7 @@ Sub-tasks:
 - [x] Capability-vs-use-case scope decision — resolved, this blog owns capabilities only, light 5-job teaser + cross-link, full examples deferred to §4.
 - [x] Christoph's `index-assist.html` numbers — resolved, dropped entirely (see decision above), replaced with the pptx + Medium #1/#2 sources.
 - [ ] Rewrite the existing draft's throughline away from "this release brings..." into the four pillars above; demote the SaaS-release-338 tie-in to a closing footnote (the existing draft already does this in its last paragraph — keep that, drop the framing role it currently also plays earlier in the piece).
-- [ ] Persist the `Agentic_Analytics__Example_Prompts.pptx` content into a memory doc before it's lost (session-ephemeral upload) — full prompt list + category breakdown, not the (outdated) screenshot numbers.
+- [x] Persist the `Agentic_Analytics__Example_Prompts.pptx` content into a memory doc before it's lost (session-ephemeral upload) — done, see `memory/example-prompts-inventory.md`.
 - [ ] Use the pptx's causal-alert-merge / EntityResourceImpl / systemic-recurring-issues prompts as pillar 1 demonstration material (descriptively, not numerically).
 - [ ] Use Medium #1's causal alert-merge example and Medium #2's headline token-compression stat as pillar 1/2/4 evidence, per the decision above.
 - [ ] Verify ownership/current validity of the ~85% / 2-3x stats before publishing (pillar 2) — this one is still pending, not dropped; it comes from the existing draft (a real, reviewed release blog), not from Christoph's page, so it's a different evidentiary tier.
