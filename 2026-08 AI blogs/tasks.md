@@ -73,15 +73,16 @@ Sub-tasks:
 
 ## 4. Governance & enterprise readiness blog
 
-**Status:** no draft yet. **Weakest source material of the five** — this is a real content gap, not just an ordering choice.
+**Status:** no draft yet. **Revised (2026-08-01, see `competitive-differentiation-review.md` §4):** this blog is better-sourced than first assessed — real *shipped* governance mechanics already exist in `product-ai-messaging.md` §3 and just hadn't been routed into this plan yet.
 
-What we do have (all secondary/trust-module fragments, not a dedicated treatment):
+What we do have:
+- **Shipped, concrete mechanics** (`product-ai-messaging.md` §3): per-user OAuth 2.1 enforcement, per-tool admin allow-listing, a unified audit trail spanning both Dynatrace and the partner tool, cost attribution by data owner, and — the most distinctive item — **per-agent monthly budget caps with a "circuit breaker" mode** in Cloud SRE Agents. None of the five competitors reviewed in `competition.md` mention budget-capped agent spend; this is a genuine differentiator worth leading with rather than burying.
 - Trust-badge language from the positioning drafts: "Grounded / Approved / Audited / In your IAM," "Customer-isolated," "Not used for training — opt out anytime," "Governed by IAM," the DATA/ANALYTICS/UNDERSTAND/ACT/TRUST five-layer stack (`positioning-evolution.md` §6, §10.1–10.3).
 - Medium #5's service-user/permission-boundary governance narrative (dedicated service user with reduced scope as agent actor) — the single most concrete, step-by-step governance example available (`medium-content-analysis.md` §"Reusable Concrete Assets — #5").
-- Competitor governance framing for contrast, in `competition.md` (e.g., Datadog's audit trail / fair-use limits language, Rootly's BYOK/zero-training trust positioning).
+- Competitor governance framing for contrast, in `competition.md` (e.g., Datadog's audit trail / fair-use limits language, Rootly's BYOK/zero-training trust positioning) — Dynatrace's OAuth 2.1 + budget caps are more specific than any of these.
 
 Sub-tasks:
-- [ ] **Source real governance/compliance detail** — SOC2/ISO status, data residency specifics, exact IAM/RBAC mechanics for agent actions, audit-trail retention/format, any AI-specific governance certifications. None of this is in the memory docs yet; needs either a docs pass (`docs.dynatrace.com`), an SME conversation, or pointers from the user.
+- [ ] Still worth **sourcing formal compliance detail** — SOC2/ISO status, data residency specifics, any AI-specific certifications — for a fully enterprise-readiness-grade treatment, but this is now a nice-to-have deepening rather than a blocking gap; the product-mechanics material above is enough to draft a solid first version.
 - [ ] Decide whether this blog is customer-facing marketing (reuse the trust-badge language above) or more technical/compliance-oriented (would need the missing detail above) — the answer changes how much new research is required.
 - [ ] Once sourced, map content against competitor trust claims in `competition.md` for differentiation (e.g., Causely's agent-agnostic middleware stance, Traversal's read-only "Agentless Data Capture" pitch).
 - [ ] This is a good candidate to plan **last**, after the others surface any additional governance mentions worth folding in.
