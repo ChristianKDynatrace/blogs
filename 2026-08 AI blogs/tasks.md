@@ -1,62 +1,89 @@
 # Blog Production Plan — Task Breakdown (Aug 2026)
 
-*Purpose: break the planned blog series into concrete sub-tasks/decisions before we move into per-blog planning. Draws on the memory docs in `memory/` (writing-style, product-ai-messaging, competition, positioning-evolution, medium-content-analysis) and the existing draft in `agentic analytics/`.*
+*Purpose: break the planned blog series into concrete sub-tasks/decisions before we move into per-blog planning. Draws on the memory docs in `memory/` (writing-style, product-ai-messaging, competition, positioning-evolution, medium-content-analysis, competitive-differentiation-review) and the existing draft in `agentic analytics/`.*
 
-Five planned pieces, in the order the user listed them:
+**Update (2026-08-01, planning session):** the cross-cutting decisions in §0 have been resolved through planning discussion, and the series is now **6 pieces**, not 5 (SRE Agent confirmed as its own blog). A structural principle also emerged that reshapes several of these: **separate durable capability content from evolving use-case content** — see the note at the top of §1.
 
-1. Agentic Analytics / Agentic Investigations
-2. Agentic Operations (± dedicated SRE Agent blog)
-3. Five use-case groups, concrete examples (human-led + autonomous)
-4. Governance & enterprise readiness
-5. Medium blog summary/consolidation
-
----
-
-## 0. Cross-cutting decisions needed before drafting (blockers, not busywork)
-
-These recur across multiple blogs below, so resolving them once up front saves rework:
-
-- **Naming: "Agentic Analytics" vs "Agentic Investigations."** Affects blog #1's title/framing and how it cross-links to blog #3. `positioning-evolution.md` §1/§3 uses "Conversational Agentic Analytics" as the umbrella term; Christoph's pages use "Investigation" as one product surface within it, not a synonym for the whole thing. Needs a decision, not more research.
-- **SRE Agent: folded into "Agentic Operations" or its own blog?** `positioning-evolution.md` §2/§4 shows Christian already drafted these as separate page pairs (`overview-v1-*` vs `sre-agent-v1-*`), and Christoph split further into `index` / `index-assist` / `index-investigation`. Precedent leans toward **two pieces** (an Operations overview + a dedicated SRE Agent deep-dive), but this is the user's call.
-- **New vocabulary vs. Problems-journey continuity.** Christian's copy coins "the operator" / "TRIAGE. ROUTE. REMEDIATE." as a standalone tagline; Christoph deliberately avoids new terms and anchors to the existing Problems-app spine (Triage → Investigate → Remediate). Flagged as unresolved in `positioning-evolution.md` §9 — whichever blog covers SRE Agent / Operations needs one consistent choice.
-- **Outcome vs. Trust: two audiences or one blended narrative?** Same section shows these as full parallel page pairs today. For a blog (linear, one read-through) we likely want one blended narrative rather than two versions — but worth confirming before drafting blog #2, since it affects structure more than blog #1 or #3.
-- **Overpromise risk on autonomous remediation.** Explicitly flagged in `positioning-evolution.md` §9 and `product-ai-messaging.md`: current SRE Agent triages/routes/recommends, but full autonomous execution needs a manual trigger today; true end-to-end autonomy depends on cloud SRE agent collaboration (future). Any Operations/SRE Agent copy needs to state capability honestly — this is a wording discipline item, not a research gap.
+1. Agentic Analytics (capability-focused, human-led)
+2. Agentic Operations overview (capability-focused, autonomous — mirrors #1's structure)
+3. SRE Agent (dedicated deep-dive)
+4. Five use-case groups, concrete examples (human-led + autonomous) — **now the sole owner of full worked examples**, referenced by #1 and #2 rather than duplicated in them
+5. Governance & enterprise readiness
+6. Medium blog summary/consolidation (still open go/no-go)
 
 ---
 
-## 1. Agentic Analytics / Agentic Investigations blog
+## 0. Cross-cutting decisions — RESOLVED (2026-08-01)
 
-**Status:** furthest along — a full draft already exists: `agentic analytics/PNB-Agentic-Analytics_Original.md` + a language-reviewed pass `..._after_language_review.md`.
+- **Naming: "Agentic Analytics."** Decided over "Agentic Investigations." All five reviewed competitors (`competition.md`) are fundamentally investigation products — naming the human-led blog "Investigations" would read as entering their game on their terms. "Agentic Analytics" is wide enough to include investigation as the lead job while making room for cost/tuning, forecasting/risk, security, and reporting as jobs none of the five competitors claim conversationally. Investigation stays the opening chapter (competitive parity, most relatable hook) but isn't the umbrella name.
+- **SRE Agent: its own blog**, separate from a broader Agentic Operations overview. Matches how both Christian (`overview-v1-*` vs `sre-agent-v1-*`) and Christoph (`index` vs `index-investigation`) already split their drafts independently — a strong signal this is the natural seam.
+- **Vocabulary: new branded vocabulary**, not Problems-journey-only continuity. Operations/SRE Agent content leads with "the operator" / "Triage. Route. Remediate." as a distinct SRE Agent brand line. Note: "the operator" is still an undefined entity per `positioning-evolution.md` §9 — the SRE Agent blog needs to do that definitional work, not just reuse the label.
+- **Outcome vs. Trust: kept as two angles within one piece**, not blended into a single narrative. Whichever blog covers Operations/SRE Agent should read as one outcome-led piece with a distinct, identifiable trust/governance section or callout — not two separate articles, but not fully dissolved into one voice either.
+- **Category naming: avoid "AI SRE."** Don't fight on a category term Rootly and Traversal have already invested in defining. Keep using Dynatrace's own names (Dynatrace Intelligence, SRE Agent, the five use-case groups).
+- **Overpromise risk on autonomous remediation** (wording discipline, not a decision to make): current SRE Agent triages/routes/recommends, but full autonomous execution needs a manual trigger today; true end-to-end autonomy depends on cloud SRE agent collaboration (future). State the current maturity stage honestly in any Operations/SRE Agent copy — per `competitive-differentiation-review.md` §3, this is a chance to look *more* disciplined than Datadog/Traversal (whose headlines outrun their own docs), not just a risk to manage defensively.
+
+---
+
+## 1. Agentic Analytics blog
+
+**Status:** furthest along — a full draft already exists: `agentic analytics/PNB-Agentic-Analytics_Original.md` + a language-reviewed pass `..._after_language_review.md`. **Decision (2026-08-01): evolve this draft**, don't start fresh — its actual content (reasoning engine, model fluency, investigation skills) is already capability-shaped, which is exactly the right scope per the principle below.
+
+**Core structural principle, decided 2026-08-01:** separate *capabilities* (how it works — durable, but the specific evidence behind it evolves every release) from *use cases* (what job gets done — evolves on a much slower cadence, roughly 6-9 months). This blog and the Agentic Operations overview (§2) own capabilities; the five-use-case blog (§4) owns full worked examples for both. This keeps capability updates from forcing rewrites of use-case narrative that didn't change, and keeps examples from being duplicated/drifting across three blogs.
+
+This does **not** mean the release-note framing of the existing draft should be kept — "capability-focused" and "release-note voice" are different axes. The existing draft's throughline ("this release brings...") should be replaced with a value narrative organized around durable pillars, with current evidence attached as support rather than as the structure itself. Proposed pillars:
+
+1. **A reasoning engine that doesn't lose the thread across a real investigation** — multi-step reasoning, tool use, follows Smartscape topology as far as the evidence leads. Competitive edge to make explicit here (from `competitive-differentiation-review.md` §1): Grail + Smartscape are precomputed *before* the question is asked, unlike Causely/Traversal, which build their causal graph at investigation time. This is the sharpest, least-contested differentiator available — name it, don't imply it.
+2. **A model fluent in your data, not just language** — trained on real DQL queries. Evidence: ~85% valid-query rate in zero-context cases / 2-3x faster than previous implementations. These appear stated as fact (unhedged) in the existing draft, unlike the more cautious "pending external validation" caption on Christoph's `index-assist.html` — treat them as real evidence, but do a quick ownership check before publishing.
+3. **Investigation expertise that's encoded, not reasoned from scratch** — the curated skills (RCA, telemetry correlation, hyperscaler-specific knowledge), plus the forward-looking detail that teams will contribute their own skills later. Frame as "versioned, inspectable, eventually yours to extend" — a specific angle Rootly/Causely don't claim.
+4. **One brain, every job — not just incidents.** This is where "beyond incident remediation" gets a real section instead of the current draft's one throwaway line. Argue *why* it generalizes (the engine/fluency/skills aren't incident-specific), then a short, named 5-job teaser — **Investigate / Optimize & Tune / Risk & Impact / Security / Agentic Reporting** (corrected group names — "Optimize & Tune" not "Optimize cost," "Risk & Impact" framed as forward-looking "what if" simulation, not just forecasting; also now 5 jobs, closing the Agentic Reporting gap flagged everywhere else) — each one line, cross-linked to the use-case blog (§4) for depth. Include one concrete cross-domain vignette here (e.g. the "which services with critical vulnerabilities are processing revenue right now" example from `index-assist.html`) to prove the breadth claim with a real example rather than just an assertion.
 
 Sub-tasks:
-- [ ] Resolve the naming/framing decision (§0) — retitle/reframe if needed.
-- [ ] Reconcile the existing draft against the newer messaging captured in `positioning-evolution.md` — in particular, decide whether to pull in any of Christoph's `index-assist.html` material (the live-tenant proof numbers: 1,277 checkout events, 98.8% CPU host, ~85% valid-query rate — see §10.2) as harder, more concrete proof points than what's currently in the draft.
-- [ ] Cross-check against `product-ai-messaging.md` for anything shipped/announced since the draft was written that should be added.
-- [ ] Decide whether the "one question can cross your whole environment" cross-domain vignette style (Browser event → Trace ID → Service → Host → Kubernetes cluster) from `index-assist.html` is worth adopting as a structural device.
-- [ ] Pass through `writing-style.md` voice check (this is Christian's own blog, so should match his established register, not the more first-person Medium voice).
-- [ ] Final proofread/language review (a review pass already happened once — confirm whether another is needed after content changes).
+- [x] Naming/framing decision — resolved, "Agentic Analytics" (§0).
+- [x] Capability-vs-use-case scope decision — resolved, this blog owns capabilities only, light 5-job teaser + cross-link, full examples deferred to §4.
+- [ ] Rewrite the existing draft's throughline away from "this release brings..." into the four pillars above; demote the SaaS-release-338 tie-in to a closing footnote (the existing draft already does this in its last paragraph — keep that, drop the framing role it currently also plays earlier in the piece).
+- [ ] Pull in Christoph's `index-assist.html` proof points (1,277 checkout events, 98.8% CPU host, the 10-second-page-load cross-domain trace) as pillar 1/4 evidence.
+- [ ] Verify ownership/current validity of the ~85% / 2-3x stats before publishing (pillar 2).
+- [ ] Cross-check against `product-ai-messaging.md` for anything shipped/announced since the draft was written that should be folded into the pillars.
+- [ ] When §4 (five use-case blog) exists, add the actual cross-links from the pillar-4 teaser row.
+- [ ] Pass through `writing-style.md` voice check (Christian's own blog register, not the first-person Medium voice).
+- [ ] Final proofread/language review after the restructuring (a review pass already happened once on the old structure — will need another after these changes).
 
 ---
 
-## 2. Agentic Operations blog (and possibly a separate SRE Agent blog)
+## 2. Agentic Operations overview blog
 
-**Status:** no draft yet. Richest available source material of any planned piece.
+**Status:** no draft yet. Confirmed as its own blog, separate from the dedicated SRE Agent piece (§0/§3).
+
+Should mirror Blog #1's shape: capability-focused, not a use-case tour. Same principle applies — the "Prevent/Resolve/Collaborate" autonomous jobs are the operations-side counterpart to Blog #1's 5-job teaser, so this blog gets its own short teaser row + cross-link to §4 rather than developed examples, and leans on its own durable pillars (autonomous triage/routing/remediation mechanics, governance-by-design, cross-hyperscaler orchestration) rather than a specific release.
 
 Sub-tasks:
-- [ ] Decide the one-blog-vs-two-blog question (§0).
-- [ ] Decide the vocabulary question (§0) — this determines whether the blog leads with "Triage. Route. Remediate." as a branded tagline or with Problems-journey language ("the investigation is already there before you open the problem").
-- [ ] If doing a dedicated SRE Agent blog, the 8-stage problem-journey diagram (`positioning-evolution.md` §8/§10.3) is close to a ready-made backbone — decide whether to adapt it as a visual for the blog itself.
-- [ ] Pull in the three named scenario vignettes (Resolve/Prevent/Collaborate) — already reused verbatim across three separate drafts, so they're clearly considered strong, reusable material.
-- [ ] Decide whether to name specific ecosystem partners (AWS DevOps Agent, Azure SRE Agent, ServiceNow Assist, Kiro, GitHub Copilot, Atlassian Rovo Ops — from `index-investigation.html`, §10.3) and confirm current partnership/launch status of each before naming them publicly — some of these ("Kiro," "Atlassian Rovo Ops") aren't yet cross-referenced elsewhere in our memory docs and should be confirmed before publishing.
-- [ ] Explicitly apply the overpromise-risk wording discipline (§0) throughout — this is the section most likely to overstate current autonomy.
+- [x] One-blog-vs-two-blog and vocabulary questions — resolved (§0): separate SRE Agent blog, branded vocabulary ("the operator," "Triage. Route. Remediate.").
+- [ ] Foreground the cross-hyperscaler orchestration story (Cloud SRE Agents routing across AWS DevOps Agent, Azure SRE Agent, *and* Gemini Cloud Assist simultaneously) more explicitly — per `competitive-differentiation-review.md` §4, this is the single most defensible, uncontested differentiator found in the whole review and is currently under-leaned-on in the draft copy.
+- [ ] Apply the outcome/trust-as-two-angles structure (§0) — one outcome-led narrative with a distinct, identifiable trust/governance section.
+- [ ] Explicitly apply the overpromise-risk wording discipline (§0) — state the current maturity stage (Automated → Supervised Autonomous → Fully Autonomous, `product-ai-messaging.md` §2) honestly rather than letting vivid copy imply more autonomy than exists.
 - [ ] Consider folding in Medium post #5 ("Agentic Workflows are Killing your Classic Weekly Observability Report") for the workflow-automation/governance angle (service-user actor, permission boundary) — see `medium-content-analysis.md` §"Reusable Concrete Assets — #5".
 - [ ] Voice/style pass against `writing-style.md`.
 
 ---
 
-## 3. Five use-case groups blog (human-led + autonomous examples)
+## 3. SRE Agent blog (dedicated deep-dive)
 
-**Status:** no draft yet, but `medium-content-analysis.md` already did most of the source-mapping work.
+**Status:** no draft yet. Richest available source material of any planned piece.
+
+Sub-tasks:
+- [ ] Define "the operator" as a named entity (§0 flags this as currently undefined anywhere) — needed since the branded-vocabulary decision leans on it.
+- [ ] The 8-stage problem-journey diagram (`positioning-evolution.md` §8/§10.3) is close to a ready-made backbone — adapt it as a visual for this blog.
+- [ ] Pull in the three named scenario vignettes (Resolve/Prevent/Collaborate) — already reused verbatim across three separate drafts, so they're clearly considered strong, reusable material.
+- [ ] Decide whether to name specific ecosystem partners (AWS DevOps Agent, Azure SRE Agent, ServiceNow Assist, Kiro, GitHub Copilot, Atlassian Rovo Ops — from `index-investigation.html`, §10.3) and confirm current partnership/launch status of each before naming them publicly — some of these ("Kiro," "Atlassian Rovo Ops") aren't yet cross-referenced elsewhere in our memory docs and should be confirmed before publishing.
+- [ ] Explicitly apply the overpromise-risk wording discipline (§0) throughout — this is the section most likely to overstate current autonomy.
+- [ ] Apply the outcome/trust-as-two-angles structure (§0), same as §2.
+- [ ] Voice/style pass against `writing-style.md`.
+
+---
+
+## 4. Five use-case groups blog (human-led + autonomous examples)
+
+**Status:** no draft yet, but `medium-content-analysis.md` already did most of the source-mapping work. **Role clarified (2026-08-01):** this blog is now the sole owner of full worked examples for all five groups — Blogs #1 and #2 only carry a one-line-per-job teaser and cross-link here rather than developing their own examples. Worth sketching this blog's outline in parallel with #1, since #1's teaser links depend on this blog existing.
 
 Sub-tasks:
 - [ ] Build the (use case) × (human-led example, autonomous example) matrix. Current backbone mapping from `medium-content-analysis.md`:
@@ -71,7 +98,7 @@ Sub-tasks:
 
 ---
 
-## 4. Governance & enterprise readiness blog
+## 5. Governance & enterprise readiness blog
 
 **Status:** no draft yet. **Revised (2026-08-01, see `competitive-differentiation-review.md` §4):** this blog is better-sourced than first assessed — real *shipped* governance mechanics already exist in `product-ai-messaging.md` §3 and just hadn't been routed into this plan yet.
 
@@ -89,28 +116,29 @@ Sub-tasks:
 
 ---
 
-## 5. Medium blog summary/consolidation
+## 6. Medium blog summary/consolidation
 
 **Status:** open decision — may not need to be its own blog.
 
-The reuse plan in `medium-content-analysis.md` already assigns each of the 5 Medium posts a home:
-- #1 → backbone for blog #2 (Incident Analysis / SRE Agent side)
-- #2 (log-pattern/token-efficiency numbers) → cross-cutting proof point, usable in blog #1 and/or #3
-- #3 → backbone for blog #3's Optimize & Tune example
-- #4 → blog #3 (Risk & Impact, reframed) and secondarily blog #3's Agentic Reporting human-led example
-- #5 → blog #2 (governance/workflow angle) and blog #3's Agentic Reporting autonomous example
+The reuse plan in `medium-content-analysis.md` already assigns each of the 5 Medium posts a home (updated to the current 6-blog numbering):
+- #1 → backbone for blog #3 (SRE Agent, Incident Analysis side)
+- #2 (log-pattern/token-efficiency numbers) → cross-cutting proof point, usable in blog #1 and/or #4
+- #3 → backbone for blog #4's Optimize & Tune example
+- #4 → blog #4 (Risk & Impact, reframed) and secondarily blog #4's Agentic Reporting human-led example
+- #5 → blog #2/#3 (governance/workflow angle) and blog #4's Agentic Reporting autonomous example
 
 Sub-tasks:
-- [ ] **Decide if a standalone "summary of the Medium posts" blog is still needed** once #1–#4 above absorb most of the source material — if blogs #1–#4 use everything substantial, a 6th piece may be thin or redundant.
-- [ ] If it does go ahead, the natural remaining scope is: (a) explicitly cross-linking the Medium posts as "deep technical dives" for readers of the dynatrace.com blogs, and (b) surfacing whatever content doesn't fit elsewhere (e.g., Medium #2's academic citations — Drain algorithm, "Lost in the Middle" — and its raw token-count numbers, which are good standalone credibility proof but don't have an obvious home in #1–#4 otherwise).
-- [ ] If it doesn't go ahead as its own blog, fold the above residual content into blog #1 or #3 instead and retire this as a separate deliverable.
+- [ ] **Decide if a standalone "summary of the Medium posts" blog is still needed** once #1–#5 above absorb most of the source material — if the other five blogs use everything substantial, a 6th piece may be thin or redundant.
+- [ ] If it does go ahead, the natural remaining scope is: (a) explicitly cross-linking the Medium posts as "deep technical dives" for readers of the dynatrace.com blogs, and (b) surfacing whatever content doesn't fit elsewhere (e.g., Medium #2's academic citations — Drain algorithm, "Lost in the Middle" — and its raw token-count numbers, which are good standalone credibility proof but don't have an obvious home in #1–#5 otherwise).
+- [ ] If it doesn't go ahead as its own blog, fold the above residual content into blog #1 or #4 instead and retire this as a separate deliverable.
 
 ---
 
 ## Suggested sequencing (not a decision, just a recommendation)
 
-1. **Blog #1 (Agentic Analytics/Investigations)** first — closest to done, mostly reconciliation work.
-2. **Blog #3 (five use cases)** next — benefits from #1 and #2 existing, but its Security gap and taxonomy decision can be worked in parallel now.
-3. **Blog #2 (Agentic Operations / SRE Agent)** — richest material but has the most unresolved framing decisions (§0); tackle once those are settled.
-4. **Blog #4 (Governance)** last among the primary four — blocked on sourcing real content.
-5. **Blog #5 (Medium summary)** — decide go/no-go only after #1–#4 are drafted and it's clear what's left over.
+1. **Blog #1 (Agentic Analytics)** first — furthest along, being actively planned now (2026-08-01).
+2. **Blog #4 (five use cases)** sketched in parallel with #1, since #1's job-teaser row needs to cross-link somewhere — doesn't need to be fully drafted yet, but its outline should exist before #1 is finalized.
+3. **Blog #2 (Agentic Operations overview)** next — now unblocked since §0's framing decisions are resolved; mirrors #1's capability-first structure.
+4. **Blog #3 (SRE Agent)** — richest raw material, but needs "the operator" definitional work done first; natural follow-on to #2.
+5. **Blog #5 (Governance)** — blocked on deciding marketing-vs-compliance depth, otherwise has enough material for a first draft.
+6. **Blog #6 (Medium summary)** — decide go/no-go only after #1–#5 are drafted and it's clear what's left over.
