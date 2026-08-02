@@ -4,6 +4,8 @@
 
 **Update (2026-08-01, planning session):** the cross-cutting decisions in §0 have been resolved through planning discussion, and the series is now **6 pieces**, not 5 (SRE Agent confirmed as its own blog). A structural principle also emerged that reshapes several of these: **separate durable capability content from evolving use-case content** — see the note at the top of §1.
 
+**Update (2026-08-02): continuing on a local machine from here.** This session was running in a remote/cloud environment; work continues locally from this point. Everything up to and including this update is merged into `main` — a fresh session just needs to `git pull` and pick up where this leaves off. **Immediate next step for whoever continues:** `agentic analytics/Agentic-Analytics_Outline.md` is a drafted section-by-section outline for Blog #1, built from the decisions in §1 below — it has **not yet been reviewed by the user**. Next action is to walk through it for feedback/adjustments, then turn it into full prose. Don't skip straight to prose without that review pass, since the outline hasn't been confirmed yet.
+
 1. Agentic Analytics (capability-focused, human-led)
 2. Agentic Operations overview (capability-focused, autonomous — mirrors #1's structure)
 3. SRE Agent (dedicated deep-dive)
@@ -49,11 +51,10 @@ Sub-tasks:
 - [x] Naming/framing decision — resolved, "Agentic Analytics" (§0).
 - [x] Capability-vs-use-case scope decision — resolved, this blog owns capabilities only, light 5-job teaser + cross-link, full examples deferred to §4.
 - [x] Christoph's `index-assist.html` numbers — resolved, dropped entirely (see decision above), replaced with the pptx + Medium #1/#2 sources.
-- [ ] Rewrite the existing draft's throughline away from "this release brings..." into the four pillars above; demote the SaaS-release-338 tie-in to a closing footnote (the existing draft already does this in its last paragraph — keep that, drop the framing role it currently also plays earlier in the piece).
 - [x] Persist the `Agentic_Analytics__Example_Prompts.pptx` content into a memory doc before it's lost (session-ephemeral upload) — done, see `memory/example-prompts-inventory.md`.
-- [ ] Use the pptx's causal-alert-merge / EntityResourceImpl / systemic-recurring-issues prompts as pillar 1 demonstration material (descriptively, not numerically).
-- [ ] Use Medium #1's causal alert-merge example and Medium #2's headline token-compression stat as pillar 1/2/4 evidence, per the decision above.
-- [ ] Verify ownership/current validity of the ~85% / 2-3x stats before publishing (pillar 2) — this one is still pending, not dropped; it comes from the existing draft (a real, reviewed release blog), not from Christoph's page, so it's a different evidentiary tier.
+- [x] **Outline drafted (2026-08-02)** — see `agentic analytics/Agentic-Analytics_Outline.md`. Covers: throughline rewritten away from "this release brings..." into the four pillars, release-338 tie-in demoted to a closing footnote, the pptx's causal-alert-merge/EntityResourceImpl/systemic-recurring-issues prompts placed as pillar 1 evidence, Medium #1/#2 placed as pillar 1/2/4 evidence, the 5-job teaser with corrected group names, and a working title. **Not yet reviewed by the user — do this before drafting full prose.**
+- [ ] **Next action:** walk through `Agentic-Analytics_Outline.md` with the user for feedback (section order, what to cut/expand, title) before writing full prose.
+- [ ] Verify ownership/current validity of the ~85% / 2-3x stats before publishing (pillar 2) — still pending, not dropped; it comes from the existing draft (a real, reviewed release blog), not from Christoph's page, so it's a different evidentiary tier.
 - [ ] Cross-check against `product-ai-messaging.md` for anything shipped/announced since the draft was written that should be folded into the pillars.
 - [ ] When §4 (five use-case blog) exists, add the actual cross-links from the pillar-4 teaser row.
 - [ ] Pass through `writing-style.md` voice check (Christian's own blog register, not the first-person Medium voice).
